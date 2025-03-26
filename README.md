@@ -19,3 +19,9 @@ access endpoint using `POST` method at
 ```sh
 http://localhost:3000/
 ```
+body 
+```
+{
+ keyword : "ARTICLE_KEYWORD"
+}
+```
