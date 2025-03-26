@@ -27,9 +27,10 @@ class Controller {
         model: 'gemini-1.5-flash',
         contents: `Buatkan artikel pendek (200-300 kata) mengenai ${input}`,
       });
-      const article = response.text;
+      const article =
+        `<img src="${pictures[0].url}" alt="${input}">` + response.text;
 
-      res.status(201).json({ article, pictures });
+      res.status(201).json(article);
     } catch (error) {
       next(error);
     }
